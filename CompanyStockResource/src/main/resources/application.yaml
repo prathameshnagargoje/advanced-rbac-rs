@@ -1,0 +1,15 @@
+server:
+  port: 8088
+
+resource:
+  name: CompanyStockResource
+  
+spring:
+  application:
+    name: stock-resource
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/auth/realms/AdvancedRBAC
+          jwk-set-uri: http://localhost:8180/auth/realms/AdvancedRBAC/protocol/openid-connect/certs
